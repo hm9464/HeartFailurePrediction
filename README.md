@@ -21,4 +21,6 @@ Dataset description:
     Thal: 3 = normal; 6 = fixed defect; 7 = reversable defect
 
 Model created using artifical neural network.
+Requirements: Python 3.5 with tensorflow package installed
+
 Accuracy: 
