@@ -1,8 +1,8 @@
 # heartFailurePrediction
 Neural network to predict the severity of heart failure based on various vital signs and demographic parameters.
 
-Dataset: HeartDiseaseData.csv
 Dataset obtained from UCI machine learning repository. 
+Dataset: HeartDiseaseData.csv
 
 Dataset description:
 
