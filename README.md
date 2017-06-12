@@ -20,7 +20,9 @@ Dataset description:
     Ca: number of major vessels (0-3) colored by flourosopy
     Thal: 3 = normal; 6 = fixed defect; 7 = reversable defect
 
+Output: severity of heart failure on a scale of 0-4, with 0 being no HF, and 4 being the heighest severity of HF.
+
 Model created using artifical neural network.
 Requirements: Python 3.5 with tensorflow package installed
 
-Accuracy: 
+Accuracy: 88.3%
