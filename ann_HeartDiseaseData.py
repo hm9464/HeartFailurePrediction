@@ -1,33 +1,22 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Apr 21 16:13:44 2017
+file: ann_HeartDiseaseData.py
+author: Himanshu
+description: Artifical Neural Network to predict severity of heart failure
 
-@author: Himanshu
-"""
+Installing Theano
+pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git
 
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Apr 21 14:32:36 2017
+Installing Tensorflow
+pip install tensorflow
 
-@author: Himanshu
-"""
+Installing Keras
+pip install --upgrade keras
 
-# Artificial Neural Network
+activating python 3.5 environment: activate py35/deactivate py35
+running script in virtual environment: 
+spyder --new-instance to activate python 3.5 in spyder (from cmd: tools>open cmd)
 
-# Installing Theano
-# pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git
-
-# Installing Tensorflow
-# pip install tensorflow
-
-# Installing Keras
-# pip install --upgrade keras
-
-# activating python 3.5 environment: activate py35/deactivate py35
-# running script in virtual environment: 
-# spyder --new-instance to activate python 3.5 in spyder (from cmd: tools>open cmd)
-
-'''
 Data description:
     Age: number
     Sex: Binary (male=1)
@@ -42,7 +31,7 @@ Data description:
     Slope: slope of the peak exercise 
     Ca: number of major vessels (0-3) colored by flourosopy
     Thal: 3 = normal; 6 = fixed defect; 7 = reversable defect
-'''
+"""
 
 # Part 1 - Data Preprocessing ############################################
 
@@ -52,7 +41,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Importing the dataset
-dataset = pd.read_csv('C:/Users/Himanshu/Desktop/HeartDisease2.csv')
+dataset = pd.read_csv('C:/Users/Himanshu/Desktop/HeartDiseaseData.csv')
 X = dataset.iloc[:, 0:13].values #index of columns in the independent (predictor) variables
 y = dataset.iloc[:, 13:18].values #col 13 (what we are predicting)
 
@@ -112,9 +101,9 @@ y_pred = classifier.predict(X_test) # gives prediction for each observation in t
 # use higher threshold for sensitive info (like medicine)
 # now in y_pred dataframe, it gives answer as true/false, rather than just probability
  
-# Making the Confusion Matrix
-from sklearn.metrics import confusion_matrix
-cm = confusion_matrix(y_test, y_pred)
+# Making the Confusion Matrix (revisit later)
+#from sklearn.metrics import confusion_matrix
+#cm = confusion_matrix(y_test, y_pred)
 
 ####################################################################
 
@@ -136,3 +125,11 @@ Thal: 7
 
 sample_patient = sc.transform(np.array([[54,1,4,168,350,0,2,167,1,2.8,2,2,7]]))
 sample_pred = classifier.predict(sample_patient)
+'''
+For sample patient listed above: % chance of heart failure at different severity
+    level 0 = 12.4%
+    level 1 = 24%
+    level 2 = 32.2%
+    level 3 = 35.9%
+    level 4 = 12.5%
+'''
