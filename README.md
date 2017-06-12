@@ -19,6 +19,12 @@ Dataset description:
     Slope: slope of the peak exercise 
     Ca: number of major vessels (0-3) colored by flourosopy
     Thal: 3 = normal; 6 = fixed defect; 7 = reversable defect
+    
+    num0 = level 0 heart failure (no HF)
+    num1 = level 1 heart failure
+    num2 = level 2 heart failure
+    num3 = level 3 heart failure
+    num4 = level 4 heart failure (most severe)
 
 Output: severity of heart failure on a scale of 0-4, with 0 being no HF, and 4 being the heighest severity of HF.
 
